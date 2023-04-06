@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+.HomePage,.AboutPage,.GrantPage,.RankPage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  font-family: 'Single Day', cursive;
+}
+
+.r-logo {
+  transform: rotate(-25deg);
+  margin-left: 15rem;
+}
+
+.r2-logo {
+  transform: rotate(25deg);
+  margin-right: 15rem;
+}
+
+.r3-logo {
+  transform: rotate(25deg);
+  margin-top: 15rem;
+  margin-right: 5rem;
+}
+
+.r4-logo {
+  margin-top: 15rem;
+  margin-left: 3rem;
+  transform: rotate(-35deg);
+}
+
+.r5-logo {
+  transform: rotate(-15deg);
+  margin-left: 8rem;
+}
+
+.r6-logo {
+  transform: rotate(-150deg);
+}
+
+.r7-logo {
+  transform: rotate(-45deg);
+}
+
+.r8-logo {
+  transform: rotate(-115deg);
+}
+
+.r9-logo {
+  transform: rotate(25deg);
+  margin-top: 5vh;
+  margin-right: 5rem;
+}
+
+.r10-logo {
+  transform: rotate(-15deg);
+  margin-left: 5vh;
+}
+
+.grant-pool {
+  margin-left: 1rem;
+}
+
+.nav-logo {
+  display: flex;
+  height:8vh;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  margin-left: 4vh;
+  margin-top: 1.5vh;
+}
+
+.right {
+  display:flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 4vh;
+  margin-top: 1vh;
+}
+
+.nav-title {
+}
+
+.grant-link,.rank-link,.about-link {
+  margin-right: 2rem;
+}
+
+.nav-gift-logo {
+  margin-right: 1rem;
+}
+
+.connect-button {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color:white;
+  text-align: center;
+  cursor:pointer;
+  border-radius: 5px 5px 5px 5px;
+  transition: 0.5s;
+  border:none;
+  background-color: black;
+  height: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.37rem;
+}
+
+hr {
+  border: none;
+  height:1px;
+  background-color: dimgrey;
+}
+
+.alert-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.center {
+  display: flex;
+  height:80vh;
+  color:white;
+  text-align: center;
+}
+
+.words {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.blank {
+  height:30vh;
+}
+
+.small-blank {
+  height:15vh;
+}
+
+.tiny-blank {
+  height:5vh;
+}
+
+.team {
+  margin-right: 1vh;
+}
+
+.creator-logo {
+  margin-top: 2.4vh;
+}
+
+.creator {
+  display: flex;
+  justify-content: center;
+  height:4vh;
+}
+
+.bottom-line {
+  display: flex;
+}
+
+.bottom-left {
+  display:flex;
+  justify-content: flex-start;
+  width: 40vh;
+}
+
+.network-switch {
+  margin-left: 5vh;
+  width:30vh;
+}
+
+.bottom-right-link {
+  display:flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  height:7.2vh;
+}
+
+.twi-logo,.dis-logo {
+  margin-right:10px;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-top: 2vh;
+  margin-right: 1vh;
+}
+
+.git-logo {
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-right: 5vh;
+  margin-top: 2vh;
+}
+
+.wd-button {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  font-family: inherit;
+  margin-left: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+  width:7rem;
+  height:2.2rem;
+  text-align: center;
+}
+
+.grant-button {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  font-family: inherit;
+  margin-left: 1rem;
+  margin-top: 1.7rem;
+  transition: 0.5s;
+  cursor: pointer;
+  width:7rem;
+  height:2.2rem;
+  text-align: center;
+}
+
+.grant-line {
+  display: flex;
+  justify-content: center;
+}
+
+.grant-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-words {
+  margin-top: 21vh;
+  display: flex;
+  justify-content: center;
+}
+
+.user-balance {
+  margin-left: 1rem;
+}
+
+.search-button {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  font-family: inherit;
+  margin-left: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+  width:7rem;
+  height:2.2rem;
+  text-align: center;
+}
+
+.search-line {
+  margin-top: 6vh;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.paper {
+  margin-top: 4vh;
+}
+
+.funds {
+  margin-top: 1rem;
+}
+
+input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  width: 13rem;
+}
+
+.grant-received {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.grant-amount {
+  margin-left:2rem;
+}
+
+.eth-logo {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.home-eth-logo {
+  margin-top:1.5rem;
+}
+
+.grant-eth-logo {
+}
