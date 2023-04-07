@@ -24,7 +24,14 @@ const Grant = ({ accounts, setAccounts, network, setNetwork }) => {
     const [withdrawButtonText, setWithdrawButtonText] = React.useState('withdraw');
     const [grantReceivedAmount, setGrantReceivedAmount] = React.useState('0.0');
     const [userBalance, setUserBalance] = React.useState('0.0');
+    const [networkAlertOpen, setNetworkAlertOpen] = React.useState(false);
 
+    const handleNetworkAlertClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setNetworkAlertOpen(false);
+    };
     const handleAddressAlertClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
@@ -80,7 +87,7 @@ const Grant = ({ accounts, setAccounts, network, setNetwork }) => {
             const etherProvider = new ethers.providers.Web3Provider(window.ethereum);
             const net = await etherProvider.getNetwork();
             if (net.chainId !== 534353 && network === 'scroll') {
-                console.log("wrong scroll network");
+                setNetworkAlertOpen(true);
                 return;
             }
             else if (net.chainId !== 324 && network === 'zksync') {
@@ -112,11 +119,25 @@ const Grant = ({ accounts, setAccounts, network, setNetwork }) => {
             setAmountAlertOpen(true);
             return;
         }
-        if (accounts[0] != null && window.ethereum) {
+        if (accounts[0] == null) {
+            setConnectAlertOpen(true);
+            return;
+        }
+        if (window.ethereum) {
             // const etherProvider = new ethers.providers.Web3Provider(window.ethereum);
             const etherProvider = new ethers.providers.JsonRpcProvider(
                 'https://alpha-rpc.scroll.io/l2'
             );
+            const net = await etherProvider.getNetwork();
+            if (net.chainId !== 534353 && network === 'scroll') {
+                setNetworkAlertOpen(true);
+                console.log("wrong scroll network");
+                return;
+            }
+            else if (net.chainId !== 324 && network === 'zksync') {
+                console.log("wrong zksync network");
+                return;
+            }
             const signer = etherProvider.getSigner();
             const contract = new ethers.Contract(giftScrollAddress, Gift.abi, signer);
             try {
@@ -232,6 +253,11 @@ const Grant = ({ accounts, setAccounts, network, setNetwork }) => {
             <Snackbar open={successOpen} autoHideDuration={3000} onClose={handleSuccessClose}>
                 <Alert onClose={handleSuccessClose} severity="success" sx={{ width: '100%' }}>
                     Success
+                </Alert>
+            </Snackbar>
+            <Snackbar open={networkAlertOpen} autoHideDuration={3000} onClose={handleNetworkAlertClose}>
+                <Alert onClose={handleNetworkAlertClose} severity="warning" sx={{ width: '100%' }}>
+                    Wrong scroll network
                 </Alert>
             </Snackbar>
         </>
