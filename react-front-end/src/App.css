@@ -270,6 +270,31 @@ hr {
   margin-top: 4vh;
 }
 
+.csv-link{
+  text-decoration: none;
+  color:white;
+  font-size:x-large;
+}
+
+.export {
+  margin-left: 2vh;
+}
+
+.export-button {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  font-family: inherit;
+  transition: 0.5s;
+  cursor: pointer;
+  width:10vh;
+  height:2.2rem;
+  text-align: center;
+}
+
+.export-logo {
+  margin-top: 0.3rem;
+}
+
 .funds {
   margin-top: 1rem;
 }

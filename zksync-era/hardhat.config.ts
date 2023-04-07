@@ -4,7 +4,7 @@ import "@matterlabs/hardhat-zksync-verify";
 
 module.exports = {
     zksolc: {
-        version: "1.3.6",
+        version: "1.3.5",
         compilerSource: "binary",
         settings: {
             "compilerPath": "your_file_path"
@@ -32,6 +32,6 @@ module.exports = {
         apiKey: "API_KEY"
       },
     solidity: {
-        version: "0.8.16",
+        version: "0.8.18",
     },
 };

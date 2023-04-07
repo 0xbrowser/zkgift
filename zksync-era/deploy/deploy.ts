@@ -18,5 +18,6 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // 输出合约的相关信息
   const contractAddress = giftContract.address;
   console.log(`${artifact.contractName} was deployed to ${contractAddress}`);
+  console.log(giftContract.interface.encodeDeploy([]));
 
 }
