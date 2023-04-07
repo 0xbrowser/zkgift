@@ -74,10 +74,8 @@ const Bottom = ({ network, setNetwork }) => {
         setChecked(!checked);
         if(checked === true){
             setNetwork("scroll");
-            console.log("switch to Scroll");
         } else {
             setNetwork("zksync");
-            console.log("switch to zkSync");
         }
     }
 

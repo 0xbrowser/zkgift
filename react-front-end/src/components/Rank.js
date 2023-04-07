@@ -16,7 +16,7 @@ import { CSVLink } from 'react-csv';
 
 // const giftAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 const giftScrollAddress = "0xF3055c1BC0B8B5C74A89A4B66FA854F5865fe023";
-const giftZksyncAddress = "0x01336d936E7C0FDE9fe7Fd80EfF96bD3D4aaF938";
+const giftZksyncAddress = "0xBBa240aDd17Af8f4C929F305fF9C0e11B422A48D";
 
 const abi = [
     "function getGrantAddress(address) view returns (address[])",
@@ -80,7 +80,8 @@ const Rank = ({ accounts, setAccounts, network, setNetwork }) => {
                 setNetworkAlertOpen(true);
                 return;
             }
-            else if (net.chainId !== 324 && network === 'zksync') {
+            // 324 mainnet 280 testnet
+            else if (net.chainId !== 280 && network === 'zksync') {
                 console.log("wrong zksync network");
                 return;
             }
