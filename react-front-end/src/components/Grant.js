@@ -70,7 +70,6 @@ const Grant = ({ accounts, setAccounts, network, setNetwork }) => {
     };
 
     async function grant() {
-        console.log(network);
         if (!recipientAddress) {
             setAddressAlertOpen(true);
             return;
@@ -99,22 +98,23 @@ const Grant = ({ accounts, setAccounts, network, setNetwork }) => {
             //     'https://alpha-rpc.scroll.io/l2'
             //   );
             const signer = etherProvider.getSigner();
-            if (network === 'scroll')
-                var contract = new ethers.Contract(giftScrollAddress, Gift.abi, signer);
-            else if (network === 'zksync')
-                var contract = new ethers.Contract(giftZksyncAddress, Gift.abi, signer);
-            try {
-                setGrantButtonText("confirming");
-                const tx = await contract.grant(recipientAddress, { value: ethers.utils.parseEther(grantFunds) });
-                setGrantButtonText("pending");
-                await tx.wait();
-                setGrantButtonText("grant");
-                setSuccessOpen(true);
-            } catch (error) {
-                setErrorOpen(true);
-                setGrantButtonText("grant");
-                console.log(error);
-            }
+            const contract = new ethers.Contract(giftScrollAddress, Gift.abi, signer);
+            if (network === 'scroll') {
+                try {
+                    setGrantButtonText("confirming");
+                    const tx = await contract.grant(recipientAddress, { value: ethers.utils.parseEther(grantFunds) });
+                    setGrantButtonText("pending");
+                    await tx.wait();
+                    setGrantButtonText("grant");
+                    setSuccessOpen(true);
+                } catch (error) {
+                    setErrorOpen(true);
+                    setGrantButtonText("grant");
+                    console.log(error);
+                }
+            } 
+            // else if (network === 'zksync')
+            //     var zkcontract = new ethers.Contract(giftZksyncAddress, Gift.abi, signer);
         }
     }
 

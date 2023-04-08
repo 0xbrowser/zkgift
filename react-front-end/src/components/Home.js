@@ -8,7 +8,7 @@ import { useState } from "react";
 const giftScrollAddress = "0xF3055c1BC0B8B5C74A89A4B66FA854F5865fe023";
 const giftZksyncAddress = "0xBBa240aDd17Af8f4C929F305fF9C0e11B422A48D";
 
-const Home = ({ accounts, setAccounts }) => {
+const Home = ({ accounts, setAccounts, network, setNetwork }) => {
     const [grantPoolAmount, setGrantPoolAmount] = useState("");
 
     async function getPoolAmount () {
@@ -17,8 +17,10 @@ const Home = ({ accounts, setAccounts }) => {
             // const etherProvider = new ethers.providers.JsonRpcProvider(
             //     'https://alpha-rpc.scroll.io/l2'
             //   );
-            
-            const contract = new ethers.Contract(giftScrollAddress, Gift.abi, etherProvider);
+            if (network === 'scroll')
+                var contract = new ethers.Contract(giftScrollAddress, Gift.abi, etherProvider);
+            else if (network === 'zksync')
+                var contract = new ethers.Contract(giftZksyncAddress, Gift.abi, etherProvider);
             const bigAmount = await etherProvider.getBalance(giftScrollAddress);
             const amount = ethers.utils.formatEther(bigAmount);
             setGrantPoolAmount(amount);
