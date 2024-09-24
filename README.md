@@ -2,29 +2,29 @@
 
 # ZKGift
 
-#### 简介：
+#### Introduction：
 
-​	部署在zkSync和Scroll以太坊二层侧链上的Dapp，用于打赏捐赠和排名记录。
+A layer2 Dapp used for donation and ranking, running on Scroll and zkSync.
 
-​	A layer2 Dapp used for donation and ranking, running on Scroll and zkSync. 
+部署在zkSync和Scroll以太坊二层侧链上的Dapp，用于打赏捐赠和排名记录。 
 
-#### 概述：
+#### Abstract：
 
-​	只需要一个准确的地址，可以是打赏给喜爱的内容博主，用户便能即刻向对方捐赠token，无需复杂的操作，通过智能合约确保捐赠记录公开透明，并形成简洁直观的捐赠排行榜。
+With just an accurate address, it can be a reward to a favorite content blogger, and users can immediately donate tokens to each other without the need for complex operations. Through smart contracts, donation records are ensured to be transparent and transparent, and a concise and intuitive donation ranking is formed.
 
-​	ZKGift的主要目标用户是[大量的粉丝群体]/[KOL]/[项目方]，为他们提供一个高效的无验证捐赠平台，完全根据个人意愿进行捐赠或回礼，界面风格简单易用，用户在任何时间，只需输入收款地址和金额即可直接捐赠，同时生成直观完整的捐赠排行榜。
+The main target users of ZKGift are [a large fan base]/[KOL]/[project party], providing them with an efficient and unverified donation platform that allows them to donate or give back gifts completely according to their personal wishes. The interface style is simple and easy to use, and users can directly donate at any time by entering the receiving address and amount, while generating an intuitive and complete donation ranking list.
 
-​	输入受赏者地址可以检索到对应的捐赠排行榜，可以看到所有的捐赠者地址和各自的总捐赠金额。捐赠记录存储在映射中，数据公开透明，任何时刻都可查看。捐赠者可以实时查看他们对于某地址的捐赠排名，受赏者可以随时导出排行榜信息文件(address.csv)，也许可以依据排名，向捐赠者回赠对应的NFT空投或实体礼物。
+Enter the recipient address to retrieve the corresponding donation ranking list, where you can see all donor addresses and their total donation amounts. Donation records are stored in the mapping, and the data is open and transparent, which can be viewed at any time. Donors can view their donation ranking for a certain address in real-time, and recipients can export the ranking information file (address. csv) at any time. They may be able to return corresponding NFT air drops or physical gifts to donors based on the ranking.
 
-#### 整体设计：
+#### Model Design：
 
-​	[展示链接](https://miro.com/app/board/uXjVMWr_fNo=/?share_link_id=570415314609)
+[Model](https://miro.com/app/board/uXjVMWr_fNo=/?share_link_id=570415314609)
 
-#### Demo演示：
+#### Demo：
 
-​	[Demo](https://www.bilibili.com/video/BV1ek4y1v7Xc/)
+[Demo](https://www.bilibili.com/video/BV1ek4y1v7Xc/)
 
-#### 项目截图：
+#### Screenshot：
 
 HomePage
 
